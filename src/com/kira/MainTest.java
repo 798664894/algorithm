@@ -1,10 +1,7 @@
 package com.kira;
 
 import com.kira.common.utils.SortUtils;
-import com.kira.sort.InsertSort;
-import com.kira.sort.MergeSortTD;
-import com.kira.sort.SelectSort;
-import com.kira.sort.ShellSort;
+import com.kira.sort.*;
 
 public class MainTest {
 
@@ -24,9 +21,14 @@ public class MainTest {
         SortUtils.show(MergeSortTD.sort(a));
     }
 
+    public static void testMergeSortBU(Comparable a[]) {
+        SortUtils.show(MergeSortBU.sort(a));
+    }
+
     public static void main(String[] args) {
         Integer[] a = {1,4,3,8,2,0,5,42,3,6,12,99,78,45,13,25,2};
-        testMergeSort(a);
+        testMergeSortBU(a);
+        //testMergeSort(a);
         //testShellSort(a);
         //testInsertSort(a);
     }
