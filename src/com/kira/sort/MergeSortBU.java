@@ -2,6 +2,7 @@ package com.kira.sort;
 
 import com.kira.common.utils.SortUtils;
 
+
 /**
  * 自底向上的归并
  */
@@ -32,6 +33,9 @@ public class MergeSortBU {
     }
 
     public static Comparable[] sort(Comparable[] a) {
+        if (a.length < 2) {
+            return a;
+        }
          int n = a.length;
          aux = new Comparable[n];
          for (int size = 1; size < n; size += size) {

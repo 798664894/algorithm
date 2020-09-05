@@ -24,6 +24,16 @@ public class SortUtils {
         }
     }
 
+    /**
+     * 在单行中打印数组
+     * @param a 数组
+     */
+    public static void show(int[] a) {
+        for (int i : a) {
+            System.out.print(i + " ");
+        }
+    }
+
     public static boolean isSorted(Comparable[] a) {
         for (int i = 1; i < a.length; i++) {
             if (less(a[i],a[i-1])) {
